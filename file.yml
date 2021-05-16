@@ -1,0 +1,11 @@
+---
+
+- hosts: iaac
+  tasks:
+   - name: Creating an empty file
+     file:
+        path: "/etc/iaac"
+        state: touch
+        mode: 0500
+     become: yes
+     become_method: sudo

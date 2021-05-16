@@ -1,0 +1,15 @@
+---
+- name: distro name/version 
+  debug: 
+    msg: "{{ item }}" 
+  with_items: 
+    - "{{ ansible_distribution }}"
+    - "{{ ansible_distribution_version }}"     
+    
+- name: Retrieve the hostname
+  command: hostname
+  register: result
+- set_fact:
+    hostname: "{{ result.stdout }}"
+- debug:
+    var: hostname

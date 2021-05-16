@@ -1,0 +1,9 @@
+---
+
+- name: Creating empty file
+  file:
+    path: "/etc/iaac"
+    mode: 0500
+    state: touch
+  become: yes
+  become_method: sudo

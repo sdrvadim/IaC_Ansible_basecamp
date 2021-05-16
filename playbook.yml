@@ -1,0 +1,9 @@
+---
+
+- hosts: iaac
+  roles:
+    - file 
+    
+- hosts: all
+  roles:
+    - distro 
